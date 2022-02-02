@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_task01/Delivery/home_delivery.dart';
-import 'package:flutter_task01/OnBoard/OnBoardingScreen.dart';
+import 'package:flutter_task01/OnBoard/landing_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(),
       debugShowCheckedModeBanner: false,
-      home: HomeDelivery(),
+      home: LandingPage(),
     );
   }
 }

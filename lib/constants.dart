@@ -14,11 +14,8 @@ final color_facebook = const Color(0xff3B5998);
 //onboarding pages
 class Constants {
   static const String Slide_1 = ('Quick search');
-  static const String Desc_1 = ('Set your location to start exploring\nrestaurants around you');
   static const String Slide_2 = ('Track your progress with statistics');
-  static const String Desc_2 = ('Analyse personal result with detailed chart and numerical values');
-  static const String Slide_3 = ('Create photo comparisons and share your results');
-  static const String Desc_3 = ('Take before and after photos to visualize progress and get the shape that you dream about');
+  static const String Slide_3 = ('Create photo comparisons\nand share your results');
   static const String Slide_4 = ('Fast shipping');
   static const String Desc_4 = ('Set your location to start exploring\n');
 }

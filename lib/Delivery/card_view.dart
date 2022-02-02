@@ -86,3 +86,26 @@ class CardTopRated {
     ];
   }
 }
+
+class Pancakes {
+  final String title;
+  final String description;
+  final String image;
+
+  Pancakes ({ required this.description, required this.image,
+  required this.title,
+ });
+  static List<Pancakes> getUser() {
+    return <Pancakes>[
+      Pancakes(title: 'Garlic Bread & Chees',
+        image: 'assets/list_categories/pan.png',
+        description: 'Topped with 100% mazzarella cheese.',),
+      Pancakes(title: 'Garlic Bread & Chees',
+        image: 'assets/list_categories/pan.png',
+        description: 'Topped with 100% mazzarella cheese.',),
+      Pancakes(title: 'Garlic Bread & Chees',
+        image: 'assets/list_categories/pan.png',
+        description: 'Topped with 100% mazzarella cheese.',),
+    ];
+  }
+}

@@ -22,7 +22,7 @@ class _SliderLayoutViewState extends State<SliderLayoutView> {
   @override
   void initState() {
     super.initState();
-    Timer.periodic(Duration(seconds: 5), (Timer timer) {
+    Timer.periodic(const Duration(seconds: 5), (timer) {
       if (_currentPage < 2) {
         _currentPage++;
       } else {
@@ -37,7 +37,7 @@ class _SliderLayoutViewState extends State<SliderLayoutView> {
     _pageController.dispose();
   }
 
-  _onPageChanged(int index) {
+  void _onPageChanged(int index) {
     setState(() {
       _currentPage = index;
     });
@@ -47,72 +47,78 @@ class _SliderLayoutViewState extends State<SliderLayoutView> {
   Widget build(BuildContext context) => topSliderLayout();
 
   Widget topSliderLayout() => Container(
-    color: colorbg,
-    child: Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Stack(
-          alignment: AlignmentDirectional.bottomCenter,
-          children: <Widget>[
-            PageView.builder(
-              scrollDirection: Axis.horizontal,
-              controller: _pageController,
-              onPageChanged: _onPageChanged,
-              itemCount: sliderArrayList.length,
-              itemBuilder: (ctx, i) => SlideItem(i),
-            ),
-            Stack(
-              alignment: AlignmentDirectional.topStart,
+        color: colorBg,
+        child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Stack(
+              alignment: AlignmentDirectional.bottomCenter,
               children: <Widget>[
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 15.0, bottom: 55.0),
-                    child: InkWell(
-                      onTap: () {
-                        //closed screen and go to Delivery
-                        Navigator.pushAndRemoveUntil(
-                          context,
-                          MaterialPageRoute(builder: (context) => HomeDelivery()),
-                              (Route<dynamic> route) => false,
-                        );
-                        },
-                      child:Container(
-                        height: 58,
-                        width: 327,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(32))
-                        ),
-                        child:Center(
-                          child:Text('Login',
-                            style: GoogleFonts.getFont(
-                              'Nunito',
-                              color: colorbg,
-                              fontSize: 17,
-                              fontWeight: FontWeight.w700,
+                PageView.builder(
+                  scrollDirection: Axis.horizontal,
+                  controller: _pageController,
+                  onPageChanged: _onPageChanged,
+                  itemCount: sliderArrayList.length,
+                  itemBuilder: (ctx, i) => SlideItem(i),
+                ),
+                Stack(
+                  alignment: AlignmentDirectional.topStart,
+                  children: <Widget>[
+                    Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Padding(
+                        padding:
+                            const EdgeInsets.only(right: 15.0, bottom: 55.0),
+                        child: InkWell(
+                          onTap: () {
+                            //closed screen and go to Delivery
+                            Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomeDelivery()),
+                              (route) => false,
+                            );
+                          },
+                          child: Container(
+                            height: 58,
+                            width: 327,
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(32),
+                              ),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'Login',
+                                style: GoogleFonts.getFont(
+                                  'Nunito',
+                                  color: colorBg,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
                             ),
                           ),
                         ),
-                      ),),
-                  ),
-                ),
-                Container(
-                  alignment: AlignmentDirectional.bottomCenter,
-                  margin: EdgeInsets.only(bottom: 20.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      for (int i = 0; i < sliderArrayList.length; i++)
-                        if (i == _currentPage)
-                          SlideDots(true)
-                        else
-                          SlideDots(false)
-                    ],
-                  ),
-                ),
+                      ),
+                    ),
+                    Container(
+                      alignment: AlignmentDirectional.bottomCenter,
+                      margin: const EdgeInsets.only(bottom: 20.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          for (int i = 0; i < sliderArrayList.length; i++)
+                            if (i == _currentPage)
+                              SlideDots(true)
+                            else
+                              SlideDots(false)
+                        ],
+                      ),
+                    ),
+                  ],
+                )
               ],
-            )
-          ],
-        )),
-  );
+            )),
+      );
 }

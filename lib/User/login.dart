@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_task01/User/verification_number.dart';
-import 'package:flutter_task01/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../constants.dart';
+import 'verification_number.dart' show Verification;
 
 class Login extends StatefulWidget {
   @override
@@ -23,7 +24,7 @@ class _LoginState extends State<Login> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             IconButton(
-              icon: Icon(Icons.arrow_back),
+              icon: const Icon(Icons.arrow_back),
               onPressed: () {
                 Navigator.pop(context);
               },
@@ -76,7 +77,7 @@ class _LoginState extends State<Login> {
                     height: 58,
                     width: 327,
                     decoration: BoxDecoration(
-                        color: colorbg,
+                        color: colorBg,
                         borderRadius: BorderRadius.all(Radius.circular(32))),
                     child: Center(
                       child: Text(

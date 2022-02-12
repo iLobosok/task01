@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-//colors
-final colorbg = const Color(0xff20D994);
-final colorbuttontext = const Color(0xff30BE76);
-final spacebg = const Color(0xffF4F5F7);
-final button_pickup = const Color(0xffF4F5F7);
-final top_rated = const Color(0xff2E3E5C);
-final color_text_grey = const Color(0xff9FA5C0);
-final color_red_button = const Color(0xffFF6464);
-final color_apple = const Color(0xff181818);
-final color_facebook = const Color(0xff3B5998);
 
+//colors
+const colorBg = Color(0xff20D994);
+const colorbuttontext = Color(0xff30BE76);
+const spacebg = Color(0xffF4F5F7);
+const color_grey_bg = Color(0xffF2F2F2);
+const button_pickup = Color(0xffF4F5F7);
+const top_rated = Color(0xff2E3E5C);
+const color_text_grey = Color(0xff9FA5C0);
+const color_red_button = Color(0xffFF6464);
+const color_apple = Color(0xff181818);
+const color_facebook = Color(0xff3B5998);
 
 //onboarding pages
 class Constants {

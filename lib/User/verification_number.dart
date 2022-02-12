@@ -120,7 +120,7 @@ class _VerificationState extends State<Verification> {
                     height: 58,
                     width: 327,
                     decoration: BoxDecoration(
-                        color:colorbg,
+                        color:colorBg,
                         borderRadius: BorderRadius.all(Radius.circular(32))
                     ),
                     child:Center(
@@ -144,14 +144,14 @@ class _VerificationState extends State<Verification> {
                     width: 327,
                     decoration: BoxDecoration(
                         color:Colors.white,
-                        border: Border.all(color:colorbg, width: 2),
+                        border: Border.all(color:colorBg, width: 2),
                         borderRadius: BorderRadius.all(Radius.circular(32))
                     ),
                     child:Center(
                       child:Text('Send again',
                         style: GoogleFonts.getFont(
                           'Nunito',
-                          color: colorbg,
+                          color: colorBg,
                           fontSize: 17,
                           fontWeight: FontWeight.w700,
                         ),

@@ -30,7 +30,7 @@ class _LoginState extends State<Login> {
               },
             ),
             Padding(
-              padding: EdgeInsets.only(left: 102, top: 70),
+              padding: const EdgeInsets.only(left: 102, top: 70),
               child: Text(
                 'Sign up or Login',
                 style: GoogleFonts.getFont(
@@ -42,19 +42,19 @@ class _LoginState extends State<Login> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 45),
+              padding: const EdgeInsets.only(top: 45),
               child: Center(
                 child: Container(
                   width: 327,
                   height: 56,
-                  padding: EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
-                      color: Color.fromRGBO(244, 243, 243, 1),
+                      color: const Color.fromRGBO(244, 243, 243, 1),
                       borderRadius: BorderRadius.circular(8)),
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: "Email Address",
+                      hintText: 'Email Address',
                       hintStyle: GoogleFonts.getFont(
                         'Nunito',
                         color: Colors.grey,
@@ -66,7 +66,7 @@ class _LoginState extends State<Login> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 30),
+              padding: const EdgeInsets.only(top: 30),
               child: Center(
                 child: InkWell(
                   onTap: () {
@@ -76,7 +76,7 @@ class _LoginState extends State<Login> {
                   child: Container(
                     height: 58,
                     width: 327,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         color: colorBg,
                         borderRadius: BorderRadius.all(Radius.circular(32))),
                     child: Center(
@@ -95,7 +95,7 @@ class _LoginState extends State<Login> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 20),
+              padding: const EdgeInsets.only(top: 20),
               child: Center(
                 child: Text(
                   'or continue with',
@@ -109,12 +109,12 @@ class _LoginState extends State<Login> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 20),
+              padding: const EdgeInsets.only(top: 20),
               child: Center(
                 child: Container(
                   height: 58,
                   width: 327,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       color: color_apple,
                       borderRadius: BorderRadius.all(Radius.circular(32))),
                   child: Row(
@@ -129,7 +129,7 @@ class _LoginState extends State<Login> {
                           width: 22,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 12,
                       ),
                       Text(
@@ -147,12 +147,12 @@ class _LoginState extends State<Login> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 16),
+              padding: const EdgeInsets.only(top: 16),
               child: Center(
                 child: Container(
                   height: 58,
                   width: 327,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       color: color_facebook,
                       borderRadius: BorderRadius.all(Radius.circular(32))),
                   child: Row(
@@ -167,7 +167,7 @@ class _LoginState extends State<Login> {
                           width: 22,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 12,
                       ),
                       Text(
@@ -185,7 +185,7 @@ class _LoginState extends State<Login> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 16),
+              padding: const EdgeInsets.only(top: 16),
               child: Center(
                 child: Container(
                   height: 58,
@@ -193,7 +193,7 @@ class _LoginState extends State<Login> {
                   decoration: BoxDecoration(
                       color: Colors.white,
                       border: Border.all(color: Colors.grey),
-                      borderRadius: BorderRadius.all(Radius.circular(32))),
+                      borderRadius: const BorderRadius.all(Radius.circular(32))),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -206,7 +206,7 @@ class _LoginState extends State<Login> {
                           width: 22,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 12,
                       ),
                       Text(

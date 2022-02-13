@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_task01/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../constants.dart';
 
 class MyAccount extends StatefulWidget {
   @override
@@ -18,8 +19,8 @@ class _MyAccountState extends State<MyAccount> {
   late String name6;
   late String name7;
   late String name8;
-  var namesList = <String>[];
-  var buttonsList = <Column>[];
+  List<String> namesList = <String>[];
+  List<Column> buttonsList = <Column>[];
 
   @override
   void initState() {
@@ -41,258 +42,217 @@ class _MyAccountState extends State<MyAccount> {
     namesList.add(name7);
     namesList.add(name8);
   }
-  int counter = 1;
-  int count = counter+=1;
-  List<Widget> _0buildButtonsWithNames() {
-    for (counter = 0; counter < count; counter++) {
-      buttonsList.add(new Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            color: Colors.white,
-            height: 50,
-            width: MediaQuery
-                .of(context)
-                .size
-                .width,
-            child: Row(
-              children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.only(left: 20),
-                  child: Image.asset(
-                    'assets/others_icons/$counter.png',
-                    height: 25,
-                    width: 25,
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  namesList[counter],
-                  style: GoogleFonts.getFont(
-                    'Nunito',
-                    color: Colors.black,
-                    fontSize: 17,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-                Spacer(),
-                Padding(
-                  padding: EdgeInsets.only(right: 10),
-                  child: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: colorBg,
-                    size: 18,
-                  ),
-                ),
-              ],
-            ),
-          ),
 
-          /*Divider(
+  List<Widget> _0buildButtonsWithNames() {
+    for (var counter = 0; counter < 1; counter++) {
+      buttonsList.add(
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CardUI(scorex: counter),
+            const SizedBox(
+              height: 30,
+            ),
+            /*Divider(
               color: color_text_grey, //color of divider
               height: 2, //height spacing of divider
               thickness: 3, //thickness of divier line
               indent: 15, //spacing at the start of divider
               endIndent: 15, //spacing at the end of divider
             )*/
-        ],
-      ),
+          ],
+        ),
       );
     }
-    return buttonsList;
-  }
-  int count2 = counter+3;
-  List<Widget> _1buildButtonsWithNames() {
-
-    for (counter; counter < count2; counter++) {
-      buttonsList.add(new Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            color: Colors.white,
-            height: 50,
-            width: MediaQuery
-                .of(context)
-                .size
-                .width,
-            child: Row(
-              children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.only(left: 20),
-                  child: Image.asset(
-                    'assets/others_icons/$counter.png',
-                    height: 25,
-                    width: 25,
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  namesList[counter],
-                  style: GoogleFonts.getFont(
-                    'Nunito',
-                    color: Colors.black,
-                    fontSize: 17,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-                Spacer(),
-                Padding(
-                  padding: EdgeInsets.only(right: 10),
-                  child: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: colorBg,
-                    size: 18,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-      );
-    }
-    print('counter = $counter');
-    return buttonsList;
-  }
-
- /* List<Widget> _2buildButtonsWithNames() {
-    for (counter; counter < (counter+=3); counter++) {
-      counter +=3;
-      buttonsList.add(Column(
+    for (var counter = 1; counter < 4; counter++) {
+      buttonsList.add(
+        Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              color: Colors.white,
+            CardUI(scorex: counter),
+            const Divider(
+              color: color_grey_bg,
+              //color of divider
+              height: 2,
+              //height spacing of divider
+              thickness: 3,
+              //thickness of divier line
+              indent: 15,
+              //spacing at the start of divider
+              endIndent: 15, //spacing at the end of divider
+            ),
+          ],
+        ),
+      );
+    }
+    for (var counter = 4; counter < 5; counter++) {
+      buttonsList.add(
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const SizedBox(
               height: 30,
-              width: MediaQuery.of(context).size.width,
-              child: Row(
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.only(left: 20),
-                    child: Image.asset(
-                      'assets/others_icons/$counter.png',
-                      height: 25,
-                      width: 25,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    namesList[counter],
-                    style: GoogleFonts.getFont(
-                      'Nunito',
-                      color: Colors.black,
-                      fontSize: 17,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  Spacer(),
-                  Padding(
-                    padding: EdgeInsets.only(right: 10),
-                    child: Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: colorBg,
-                      size: 18,
-                    ),
-                  ),
-                ],
-              ),
+            ),
+            CardUI(scorex: counter),
+            const SizedBox(
+              height: 30,
+            ),
+          ],
+        ),
+      );
+    }
+    for (var counter = 5; counter < 8; counter++) {
+      buttonsList.add(
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CardUI(scorex: counter),
+            const Divider(
+              color: color_grey_bg,
+              //color of divider
+              height: 2,
+              //height spacing of divider
+              thickness: 3,
+              //thickness of divier line
+              indent: 15,
+              //spacing at the start of divider
+              endIndent: 15, //spacing at the end of divider
             ),
           ],
         ),
       );
     }
     return buttonsList;
-  }*/
+  }
+
+  Widget CardUI({
+    var scorex,
+  }) {
+    return Container(
+      color: Colors.white,
+      height: 50,
+      width: MediaQuery.of(context).size.width,
+      child: Row(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Image.asset(
+              'assets/others_icons/$scorex.png',
+              height: 25,
+              width: 25,
+            ),
+          ),
+          const SizedBox(
+            width: 10,
+          ),
+          Text(
+            namesList[scorex],
+            style: GoogleFonts.getFont(
+              'Nunito',
+              color: Colors.black,
+              fontSize: 17,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          const Spacer(),
+          const Padding(
+            padding: EdgeInsets.only(right: 10),
+            child: Icon(
+              Icons.arrow_forward_ios_rounded,
+              color: colorBg,
+              size: 18,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: color_grey_bg,
-      body:SafeArea(
-      child:SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Container(
                 color: Colors.white,
-                height: 200,
-          child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                IconButton(
-                  icon: Icon(Icons.arrow_back),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                ),
-                Row(
+                height: 130,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(left: 20),
-                      child: Image.asset(
-                        'assets/delivery/user_pic.jpg',
-                        height: 50,
-                        width: 50,
-                      ),
+                    IconButton(
+                      icon: const Icon(Icons.arrow_back),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 20),
-                      child: Column(
-                        children: <Widget>[
-                          Padding(
-                            padding: EdgeInsets.only(right: 55),
-                            child: Text(
-                              'User Name',
-                              style: GoogleFonts.getFont(
-                                'Nunito',
-                                color: Colors.black,
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
+                    Row(
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20),
+                          child: Image.asset(
+                            'assets/delivery/user_pic.jpg',
+                            height: 50,
+                            width: 50,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20),
+                          child: Column(
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.only(right: 55),
+                                child: Text(
+                                  'User Name',
+                                  style: GoogleFonts.getFont(
+                                    'Nunito',
+                                    color: Colors.black,
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
-                            ),
+                              Text(
+                                'user.email@eatme.io',
+                                style: GoogleFonts.getFont(
+                                  'Nunito',
+                                  color: color_text_grey,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
                           ),
-                          Text(
-                            'user.email@eatme.io',
-                            style: GoogleFonts.getFont(
-                              'Nunito',
-                              color: color_text_grey,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
-                ],),
               ),
               const SizedBox(
                 height: 30,
               ),
-              Wrap(children: _0buildButtonsWithNames(),),
-              SizedBox(height: 20,),
-              Wrap(children: _1buildButtonsWithNames(),),
-               Padding(
-                padding: EdgeInsets.only(top: 100),
+              Wrap(
+                children: _0buildButtonsWithNames(),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 50),
                 child: Center(
                   child: Container(
                     height: 58,
                     width: 327,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        border: Border.all(color: Colors.red, width: 2),
-                        borderRadius: BorderRadius.all(Radius.circular(32))),
+                        border: Border.all(color: Colors.red, width: 1),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(32))),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Icon(
+                        const Icon(
                           Icons.logout,
                           color: Colors.red,
                           size: 25,
@@ -311,10 +271,11 @@ class _MyAccountState extends State<MyAccount> {
                   ),
                 ),
               ),
+              const SizedBox(height:10),
             ],
           ),
-          ),
+        ),
       ),
-        );
+    );
   }
 }
